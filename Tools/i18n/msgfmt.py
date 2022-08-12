@@ -160,7 +160,6 @@ def make(filename, outfile):
             l = l[5:]
             msgid = msgstr = b''
             is_plural = False
-
         # This is a message with plural forms
         elif l.startswith('msgid_plural'):
             if section != ID:
