@@ -155,10 +155,12 @@ def make(filename, outfile):
                     charset = p.parsestr(msgstr.decode(encoding)).get_content_charset()
                     if charset:
                         encoding = charset
+            msgctxt = None
             section = ID
             l = l[5:]
             msgid = msgstr = b''
             is_plural = False
+
         # This is a message with plural forms
         elif l.startswith('msgid_plural'):
             if section != ID:
